@@ -1,8 +1,9 @@
+import { Button } from "@/components/ui/button";
 import React from "react";
 
 const Home = () => {
   return (
-    <div className="p-10 bg-shop-light-pink ">
+    <div className="p-10  ">
       <h1 className="text-2xl font-semibold">Welcome to the Home Page</h1>
       <p>This is the main landing page of the application.</p>
       <p>
@@ -12,6 +13,7 @@ const Home = () => {
         officiis id sapiente quam aut reprehenderit impedit vitae fuga sequi
         veniam? Reiciendis accusamus quae eligendi autem! Aut iste modi maiores?
       </p>
+      <Button size={"lg"}>Check out</Button>
     </div>
   );
 };
