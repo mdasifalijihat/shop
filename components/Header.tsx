@@ -7,10 +7,12 @@ import CartIcon from "./CartIcon";
 import FavoriteButton from "./FavoriteButton";
 import SignIn from "./SignIn";
 import MobileMenu from "./MobileMenu";
+import { currentUser } from "@clerk/nextjs/server";
+import { ClerkLoaded, SignedIn, UserButton } from "@clerk/nextjs";
 
 const Header = async () => {
-  
-
+  const user = await currentUser();
+  console.log(user, "user current ");
 
   return (
     <header className="bg-white py-5 border-b border-b-black/20">
@@ -24,7 +26,12 @@ const Header = async () => {
           <SearchBar />
           <CartIcon />
           <FavoriteButton />
-          <SignIn />
+          <ClerkLoaded>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+            {!user && <SignIn />}
+          </ClerkLoaded>
         </div>
       </Container>
     </header>
