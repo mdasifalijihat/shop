@@ -6,15 +6,18 @@ import { headerData } from "@/constants/data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import SocialMedia from "./SocialMedia";
+import { useOutsideClick } from "@/hook";
 interface SideMenuProps {
   isOpen: boolean;
   onClose: () => void;
 }
 const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
   const pathname = usePathname() || "";
+  const sidebarRef = useOutsideClick<HTMLDivElement>(onClose)
 
   return (
     <div
+      ref={sidebarRef}
       className={`fixed inset-y-0 h-screen left-0 z-50 w-full bg-black/50 shadow-xl ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       } hoverEffect`}
