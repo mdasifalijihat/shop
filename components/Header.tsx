@@ -8,7 +8,10 @@ import FavoriteButton from "./FavoriteButton";
 import SignIn from "./SignIn";
 import MobileMenu from "./MobileMenu";
 
-export default function Header() {
+const Header = async () => {
+  
+
+
   return (
     <header className="bg-white py-5 border-b border-b-black/20">
       <Container className="flex items-center justify-between text-lightColor">
@@ -26,4 +29,6 @@ export default function Header() {
       </Container>
     </header>
   );
-}
+};
+
+export default Header;
