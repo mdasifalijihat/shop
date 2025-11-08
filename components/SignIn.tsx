@@ -3,9 +3,9 @@ import React from "react";
 
 function SignIn() {
   return (
-    <SignInButton>
+    <SignInButton mode="modal">
       <button className="text-sm font-semibold hover: text-lightColor hover:cursor-pointer hoverEffect">
-        SignIn
+        LogIn
       </button>
     </SignInButton>
   );

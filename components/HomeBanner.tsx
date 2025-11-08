@@ -1,0 +1,17 @@
+import React from 'react'
+
+function HomeBanner() {
+  return (
+    <div className='py-16 md:py-0 bg-shop-light-pink rounded-lg px-10 lg:px-24 flex items-center justify-between'>
+        {/* text */}
+        <div>
+            
+        </div>
+        {/* img */}
+        <div></div>
+        
+        </div>
+  )
+}
+
+export default HomeBanner
